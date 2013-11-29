@@ -7,8 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Airplane.h"
 
-@interface PropertyListPracticeTests : XCTestCase
+@interface PropertyListPracticeTests : XCTestCase {
+  Airplane *anAirplane;
+}
 
 @end
 
@@ -16,19 +19,30 @@
 
 - (void)setUp
 {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+  [super setUp];
+  // Put setup code here. This method is called before the invocation of each test method in the class.
+  anAirplane = [[Airplane alloc]init];
+  anAirplane.model = @"Model default";
+  anAirplane.registrationNumber = @"00000";
+  anAirplane.airframeHours = 0;
 }
 
 - (void)tearDown
 {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
+  anAirplane = nil;
+  [super tearDown];
 }
 
-- (void)testExample
+- (void)testPropertyListRepresentation
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+  id shouldBeDict = [anAirplane propertyListRepresentation];
+  
+  XCTAssertTrue([shouldBeDict isKindOfClass:[NSDictionary class]],@"should be dictionary");
 }
 
+- (void)testGeneratePropertyListRepresentation {
+  Airplane *airplane = [Airplane airplaneWithPropertyListRepresentation:[anAirplane propertyListRepresentation]];
+  
+  XCTAssertEqual(airplane.model, anAirplane.model, @"should be the same");
+}
 @end

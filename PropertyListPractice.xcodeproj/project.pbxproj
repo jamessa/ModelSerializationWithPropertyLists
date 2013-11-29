@@ -18,6 +18,8 @@
 		4B11EEA118482DE500F210EA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B11EE8018482DE500F210EA /* Cocoa.framework */; };
 		4B11EEA918482DE500F210EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B11EEA718482DE500F210EA /* InfoPlist.strings */; };
 		4B11EEAB18482DE500F210EA /* PropertyListPracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B11EEAA18482DE500F210EA /* PropertyListPracticeTests.m */; };
+		4B11EEB618482F0F00F210EA /* Airplane.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B11EEB518482F0F00F210EA /* Airplane.m */; };
+		4B11EEB718482F0F00F210EA /* Airplane.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B11EEB518482F0F00F210EA /* Airplane.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		4B11EEA618482DE500F210EA /* PropertyListPracticeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PropertyListPracticeTests-Info.plist"; sourceTree = "<group>"; };
 		4B11EEA818482DE500F210EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4B11EEAA18482DE500F210EA /* PropertyListPracticeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyListPracticeTests.m; sourceTree = "<group>"; };
+		4B11EEB418482F0F00F210EA /* Airplane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Airplane.h; sourceTree = "<group>"; };
+		4B11EEB518482F0F00F210EA /* Airplane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Airplane.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 		4B11EE7418482DE500F210EA = {
 			isa = PBXGroup;
 			children = (
+				4B11EEB418482F0F00F210EA /* Airplane.h */,
+				4B11EEB518482F0F00F210EA /* Airplane.m */,
 				4B11EE8618482DE500F210EA /* PropertyListPractice */,
 				4B11EEA418482DE500F210EA /* PropertyListPracticeTests */,
 				4B11EE7F18482DE500F210EA /* Frameworks */,
@@ -255,6 +261,7 @@
 			files = (
 				4B11EE8D18482DE500F210EA /* main.m in Sources */,
 				4B11EE9418482DE500F210EA /* JSAAppDelegate.m in Sources */,
+				4B11EEB618482F0F00F210EA /* Airplane.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B11EEAB18482DE500F210EA /* PropertyListPracticeTests.m in Sources */,
+				4B11EEB718482F0F00F210EA /* Airplane.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
