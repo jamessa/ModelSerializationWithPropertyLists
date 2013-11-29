@@ -19,14 +19,10 @@
 		4B11EEA918482DE500F210EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B11EEA718482DE500F210EA /* InfoPlist.strings */; };
 		4B11EEAB18482DE500F210EA /* AirplaneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B11EEAA18482DE500F210EA /* AirplaneTests.m */; };
 		4B11EEB618482F0F00F210EA /* Airplane.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B11EEB518482F0F00F210EA /* Airplane.m */; };
-		4B11EEB718482F0F00F210EA /* Airplane.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B11EEB518482F0F00F210EA /* Airplane.m */; };
 		4B11EEBA1848819D00F210EA /* Pilot.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B11EEB91848819D00F210EA /* Pilot.m */; };
-		4B11EEBB1848819D00F210EA /* Pilot.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B11EEB91848819D00F210EA /* Pilot.m */; };
 		4B65D8F3184887F400452C81 /* PilotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B65D8F2184887F400452C81 /* PilotTests.m */; };
 		4BF1492818488F5600F40106 /* PoweredAirplane.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF1492718488F5600F40106 /* PoweredAirplane.m */; };
-		4BF1492918488F5600F40106 /* PoweredAirplane.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF1492718488F5600F40106 /* PoweredAirplane.m */; };
 		4BF1492C18488F8600F40106 /* Glider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF1492B18488F8600F40106 /* Glider.m */; };
-		4BF1492D18488F8600F40106 /* Glider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF1492B18488F8600F40106 /* Glider.m */; };
 		4BF1492F18488FF000F40106 /* PoweredAirplaneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF1492E18488FF000F40106 /* PoweredAirplaneTests.m */; };
 		4BF14931184892A200F40106 /* GliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF14930184892A200F40106 /* GliderTests.m */; };
 		969EB4E8A49F4D0EB9F26D15 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 801B69BEFD3A46B28B3ED2C3 /* libPods.a */; };
@@ -374,14 +370,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B11EEBB1848819D00F210EA /* Pilot.m in Sources */,
 				4B11EEAB18482DE500F210EA /* AirplaneTests.m in Sources */,
 				4BF14931184892A200F40106 /* GliderTests.m in Sources */,
 				4BF1492F18488FF000F40106 /* PoweredAirplaneTests.m in Sources */,
-				4BF1492918488F5600F40106 /* PoweredAirplane.m in Sources */,
 				4B65D8F3184887F400452C81 /* PilotTests.m in Sources */,
-				4BF1492D18488F8600F40106 /* Glider.m in Sources */,
-				4B11EEB718482F0F00F210EA /* Airplane.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
