@@ -27,6 +27,7 @@
 		4BF14931184892A200F40106 /* GliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF14930184892A200F40106 /* GliderTests.m */; };
 		4BF2291C184D88BD00E6B595 /* Step5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF2291B184D88BD00E6B595 /* Step5Tests.m */; };
 		4BF2291E184D8E4100E6B595 /* Test7.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF2291D184D8E4100E6B595 /* Test7.m */; };
+		4BF22921184D996700E6B595 /* MANilToleratingDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF22920184D996700E6B595 /* MANilToleratingDictionary.m */; };
 		969EB4E8A49F4D0EB9F26D15 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 801B69BEFD3A46B28B3ED2C3 /* libPods.a */; };
 		97B3FBFC5CF44DAE958A7D8C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 801B69BEFD3A46B28B3ED2C3 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,8 @@
 		4BF14930184892A200F40106 /* GliderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GliderTests.m; sourceTree = "<group>"; };
 		4BF2291B184D88BD00E6B595 /* Step5Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step5Tests.m; sourceTree = "<group>"; };
 		4BF2291D184D8E4100E6B595 /* Test7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test7.m; sourceTree = "<group>"; };
+		4BF2291F184D996700E6B595 /* MANilToleratingDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANilToleratingDictionary.h; sourceTree = "<group>"; };
+		4BF22920184D996700E6B595 /* MANilToleratingDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANilToleratingDictionary.m; sourceTree = "<group>"; };
 		801B69BEFD3A46B28B3ED2C3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		95268AD89126451C9138329F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +161,8 @@
 				4BF1492718488F5600F40106 /* PoweredAirplane.m */,
 				4BF1492A18488F8600F40106 /* Glider.h */,
 				4BF1492B18488F8600F40106 /* Glider.m */,
+				4BF2291F184D996700E6B595 /* MANilToleratingDictionary.h */,
+				4BF22920184D996700E6B595 /* MANilToleratingDictionary.m */,
 			);
 			path = PropertyListPractice;
 			sourceTree = "<group>";
@@ -369,6 +374,7 @@
 				4B11EEBA1848819D00F210EA /* Pilot.m in Sources */,
 				4BF1492C18488F8600F40106 /* Glider.m in Sources */,
 				4B11EEB618482F0F00F210EA /* Airplane.m in Sources */,
+				4BF22921184D996700E6B595 /* MANilToleratingDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

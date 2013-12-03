@@ -7,11 +7,12 @@
 //
 
 #import "Airplane.h"
+#import "MANilToleratingDictionary.h"
 
 @implementation Airplane
 
 - (id)propertyListRepresentation {
-  NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+  NSMutableDictionary *dict = [MANilToleratingDictionary dictionary];
   dict[@"class"] = NSStringFromClass([self class]);
   if (_model)
     dict[@"model"] = _model;
