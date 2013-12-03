@@ -41,25 +41,4 @@
   XCTAssertEqual(aGlider.winchLaunchCount, _glider.winchLaunchCount, @"derived properties should be the same.");
 }
 
-- (void)testSubclass {
-  Glider *glider = [[Glider alloc] init];
-  glider.model = @"a glider";
-  glider.registrationNumber = @"some number";
-  glider.airframeHours = 1;
-  glider.aerotowLaunchCount = 10;
-  glider.winchLaunchCount = 20;
-  
-  Airplane *airplane = [[Airplane alloc] init];
-  airplane.model = @"a airplane";
-  airplane.registrationNumber = @"another number";
-  airplane.airframeHours = 2;
-  
-  Pilot *pilot = [[Pilot alloc] init];
-  pilot.name = @"Thomas Crown";
-  pilot.airplanes = @[airplane,glider];
-  
-  Pilot *aPilot = [Pilot pilotWithPropertyListRepresentation:[pilot propertyListRepresentation]];
-  
-  XCTAssertEqualObjects([aPilot.airplanes[1] class], [Glider class], @"should be Glider");
-}
 @end
