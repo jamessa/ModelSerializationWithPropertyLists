@@ -9,6 +9,9 @@
 #import "Airplane.h"
 #import "MANilToleratingDictionary.h"
 
+NSString *const kPlistTypeErrorDomain = @"kPlistTypeErrorDomain";
+NSString *const kPlistTypeErrorKeyName = @"kPlistTypeErrorKeyName";
+
 @implementation Airplane
 
 - (id)propertyListRepresentation {
@@ -23,15 +26,14 @@
   return dict;
 }
 
-+ (instancetype)airplaneWithPropertyListRepresentation:(id)plist {
++ (instancetype)airplaneWithPropertyListRepresentation:(id)plist error:(NSError *__autoreleasing *)outError {
   Class class = NSClassFromString(plist[@"class"]);
   Airplane *airplane = [[class alloc]init];
   id model = plist[@"model"];
-  if (![model isKindOfClass:[NSString class]]){
-    NSLog(@"'model' field was not a string, can't load plist data. a %@ is used", [model class]);
-    return nil;
-  }
+  CHECK_REQUIRED(model, @"model", outError);
+  CHECK_TYPE(model, [NSString class], @"model", outError);
   [airplane setModel: plist[@"model"]];
+  
   [airplane setRegistrationNumber:plist[@"registartionNumber"]];
   [airplane setAirframeHours:[plist[@"airframeHours"] unsignedLongLongValue]];
   return airplane;

@@ -19,8 +19,8 @@
   return dict;
 }
 
-+ (instancetype)airplaneWithPropertyListRepresentation:(id)plist {
-  Glider *airplane = [super airplaneWithPropertyListRepresentation:plist];
++ (instancetype)airplaneWithPropertyListRepresentation:(id)plist error:(NSError *__autoreleasing *)outError {
+  Glider *airplane = [super airplaneWithPropertyListRepresentation:plist error:nil];
   airplane.aerotowLaunchCount = [plist[@"aerotoLaunchCount"] unsignedLongLongValue];
   airplane.winchLaunchCount = [plist[@"winchLaunchCount"] unsignedLongLongValue];
   return airplane;

@@ -43,7 +43,7 @@
 
 - (void)testInstance {
   
-  PoweredAirplane *aPoweredAirplane = [PoweredAirplane airplaneWithPropertyListRepresentation:[self.poweredAirplane propertyListRepresentation]];
+  PoweredAirplane *aPoweredAirplane = [PoweredAirplane airplaneWithPropertyListRepresentation:[self.poweredAirplane propertyListRepresentation] error:nil];
   
   XCTAssertEqual(aPoweredAirplane.engineHorsePower, _poweredAirplane.engineHorsePower, @"should be the same");
 }

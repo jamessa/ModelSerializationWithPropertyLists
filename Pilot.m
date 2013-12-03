@@ -22,7 +22,7 @@
 + (instancetype)pilotWithPropertyListRepresentation:(id)plist {
   Pilot *pilot = [[Pilot alloc]init];
   pilot.name = plist[@"name"];
-  pilot.airplanes = MAP(plist[@"airplanes"], [Airplane airplaneWithPropertyListRepresentation:obj]);
+  pilot.airplanes = MAP(plist[@"airplanes"], [Airplane airplaneWithPropertyListRepresentation:obj error:nil]);
   return pilot;
 }
 @end

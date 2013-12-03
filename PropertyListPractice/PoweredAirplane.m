@@ -19,8 +19,8 @@
   return dict;
 }
 
-+ (instancetype)airplaneWithPropertyListRepresentation:(id)plist {
-  PoweredAirplane *airplane = [super airplaneWithPropertyListRepresentation:plist];
++ (instancetype)airplaneWithPropertyListRepresentation:(id)plist error:(NSError *__autoreleasing *)outError {
+  PoweredAirplane *airplane = [super airplaneWithPropertyListRepresentation:plist error:nil];
   airplane.engineHorsePower = [plist[@"engineHorsePower"] intValue];
   airplane.engineHours = [plist[@"engineHours"] unsignedLongLongValue];
   return airplane;

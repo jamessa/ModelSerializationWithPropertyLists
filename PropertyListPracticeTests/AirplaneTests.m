@@ -48,7 +48,7 @@
     NSLog(@"Unable dto decode plist from data: %@", error);
     return;
   }
-  _airplane = [Airplane airplaneWithPropertyListRepresentation:plist];
+  _airplane = [Airplane airplaneWithPropertyListRepresentation:plist error:nil];
 }
 
 #pragma marke - UnitTest
@@ -79,7 +79,7 @@
 }
 
 - (void)testGeneratePropertyListRepresentation {
-  Airplane *anAirplane = [Airplane airplaneWithPropertyListRepresentation:[_airplane propertyListRepresentation]];
+  Airplane *anAirplane = [Airplane airplaneWithPropertyListRepresentation:[_airplane propertyListRepresentation] error:nil];
   
   XCTAssertEqual(_airplane.model, anAirplane.model, @"should be the same");
 }

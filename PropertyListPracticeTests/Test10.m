@@ -27,16 +27,30 @@
   [super tearDown];
 }
 
-- (void)testErrorChecking
+- (void)testErrorCheckingBadType
 {
   Airplane *airplane = [[Airplane alloc] init];
   
   id anAirplaneWithWrongModel = [airplane propertyListRepresentation];
   anAirplaneWithWrongModel[@"model"] = @1;
   
-  Airplane *invalidPlane = [Airplane airplaneWithPropertyListRepresentation:anAirplaneWithWrongModel];
+  NSError *error;
+  Airplane *invalidPlane = [Airplane airplaneWithPropertyListRepresentation:anAirplaneWithWrongModel error:&error];
   
   XCTAssertNil(invalidPlane, @"Wrong type should result nil");
+  XCTAssertEqual(error.code, kPlistBadTypeError, @"error should be bad type");
+}
+
+- (void)testErrorCheckingMissingProperty {
+  Airplane *airplane = [[Airplane alloc] init];
+  
+  NSMutableDictionary *anAirplaneWithMissingRequiredModelProperty = [airplane propertyListRepresentation];
+  
+  NSError *error;
+  Airplane *invalidPlane = [Airplane airplaneWithPropertyListRepresentation:anAirplaneWithMissingRequiredModelProperty error:&error];
+  
+  XCTAssertNil(invalidPlane, @"Missing required property should result nil");
+  XCTAssertEqual(error.code, kPlistMissingKeyError, @"error should be missing key type");
 }
 
 @end

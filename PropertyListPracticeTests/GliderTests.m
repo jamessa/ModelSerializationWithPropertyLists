@@ -37,7 +37,7 @@
 
 - (void)testInstance
 {
-  Glider *aGlider =[Glider airplaneWithPropertyListRepresentation: [self.glider propertyListRepresentation]];
+  Glider *aGlider =[Glider airplaneWithPropertyListRepresentation: [self.glider propertyListRepresentation] error:nil];
   XCTAssertEqual(aGlider.winchLaunchCount, _glider.winchLaunchCount, @"derived properties should be the same.");
 }
 
