@@ -13,9 +13,12 @@
 - (id)propertyListRepresentation {
   NSMutableDictionary *dict = [NSMutableDictionary dictionary];
   dict[@"class"] = NSStringFromClass([self class]);
-  dict[@"model"] = _model;
-  dict[@"registrationNumber"] = _registrationNumber;
-  dict[@"airframeHours"] = @(_airframeHours);
+  if (_model)
+    dict[@"model"] = _model;
+  if (_registrationNumber)
+    dict[@"registrationNumber"] = _registrationNumber;
+  if (_airframeHours)
+      dict[@"airframeHours"] = @(_airframeHours);
   return dict;
 }
 
