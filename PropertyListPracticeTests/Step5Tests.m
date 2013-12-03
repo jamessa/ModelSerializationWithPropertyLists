@@ -11,10 +11,25 @@
 #import "Pilot.h"
 
 @interface Step5Tests : XCTestCase
+@property (strong) Pilot *pilot;
 
 @end
 
 @implementation Step5Tests
+
+- (void)saveToURL:(NSURL *)url {
+  id plist = [_pilot propertyListRepresentation];
+  NSError *error;
+  NSData *plistData = [NSPropertyListSerialization dataWithPropertyList:plist format:NSPropertyListBinaryFormat_v1_0 options:0 error:&error];
+  if (!plistData) {
+    NSLog(@"Unable to generate plist from Airplane: %@", error);
+  }
+  
+  BOOL success = [plistData writeToURL:url options:NSDataWritingAtomic error:&error];
+  if (!success) {
+    NSLog(@"Unable to write plist data to disk: %@", error);
+  }
+}
 
 - (void)setUp
 {
@@ -41,13 +56,15 @@
   airplane.registrationNumber = @"another number";
   airplane.airframeHours = 2;
   
-  Pilot *pilot = [[Pilot alloc] init];
-  pilot.name = @"Thomas Crown";
-  pilot.airplanes = @[airplane,glider];
+  _pilot = [[Pilot alloc] init];
+  _pilot.name = @"Thomas Crown";
+  _pilot.airplanes = @[airplane,glider];
   
-  Pilot *aPilot = [Pilot pilotWithPropertyListRepresentation:[pilot propertyListRepresentation]];
+  Pilot *aPilot = [Pilot pilotWithPropertyListRepresentation:[_pilot propertyListRepresentation]];
   
   XCTAssertEqualObjects([aPilot.airplanes[1] class], [Glider class], @"should be Glider");
+  
+  [self saveToURL:[NSURL fileURLWithPath:@"pilots"]];
 }
 
 @end

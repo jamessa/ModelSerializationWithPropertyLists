@@ -12,6 +12,7 @@
 
 - (id)propertyListRepresentation {
   NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+  dict[@"class"] = NSStringFromClass([self class]);
   dict[@"model"] = _model;
   dict[@"registrationNumber"] = _registrationNumber;
   dict[@"airframeHours"] = @(_airframeHours);
@@ -19,7 +20,8 @@
 }
 
 + (instancetype)airplaneWithPropertyListRepresentation:(id)plist {
-  Airplane *airplane = [[self alloc]init];
+  Class class = NSClassFromString(plist[@"class"]);
+  Airplane *airplane = [[class alloc]init];
   [airplane setModel: plist[@"model"]];
   [airplane setRegistrationNumber:plist[@"registartionNumber"]];
   [airplane setAirframeHours:[plist[@"airframeHours"] unsignedLongLongValue]];
