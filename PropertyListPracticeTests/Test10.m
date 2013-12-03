@@ -35,6 +35,8 @@
   anAirplaneWithWrongModel[@"model"] = @1;
   
   Airplane *invalidPlane = [Airplane airplaneWithPropertyListRepresentation:anAirplaneWithWrongModel];
+  
+  XCTAssertNil(invalidPlane, @"Wrong type should result nil");
 }
 
 @end
