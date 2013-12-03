@@ -27,8 +27,10 @@
   Class class = NSClassFromString(plist[@"class"]);
   Airplane *airplane = [[class alloc]init];
   id model = plist[@"model"];
-  if (![model isKindOfClass:[NSString class]])
+  if (![model isKindOfClass:[NSString class]]){
+    NSLog(@"'model' field was not a string, can't load plist data. a %@ is used", [model class]);
     return nil;
+  }
   [airplane setModel: plist[@"model"]];
   [airplane setRegistrationNumber:plist[@"registartionNumber"]];
   [airplane setAirframeHours:[plist[@"airframeHours"] unsignedLongLongValue]];
