@@ -26,6 +26,7 @@
 		4BF1492F18488FF000F40106 /* PoweredAirplaneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF1492E18488FF000F40106 /* PoweredAirplaneTests.m */; };
 		4BF14931184892A200F40106 /* GliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF14930184892A200F40106 /* GliderTests.m */; };
 		4BF2291C184D88BD00E6B595 /* Step5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF2291B184D88BD00E6B595 /* Step5Tests.m */; };
+		4BF2291E184D8E4100E6B595 /* Test7.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF2291D184D8E4100E6B595 /* Test7.m */; };
 		969EB4E8A49F4D0EB9F26D15 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 801B69BEFD3A46B28B3ED2C3 /* libPods.a */; };
 		97B3FBFC5CF44DAE958A7D8C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 801B69BEFD3A46B28B3ED2C3 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		4BF1492E18488FF000F40106 /* PoweredAirplaneTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoweredAirplaneTests.m; sourceTree = "<group>"; };
 		4BF14930184892A200F40106 /* GliderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GliderTests.m; sourceTree = "<group>"; };
 		4BF2291B184D88BD00E6B595 /* Step5Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step5Tests.m; sourceTree = "<group>"; };
+		4BF2291D184D8E4100E6B595 /* Test7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test7.m; sourceTree = "<group>"; };
 		801B69BEFD3A46B28B3ED2C3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		95268AD89126451C9138329F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,6 +181,7 @@
 				4BF1492E18488FF000F40106 /* PoweredAirplaneTests.m */,
 				4BF14930184892A200F40106 /* GliderTests.m */,
 				4BF2291B184D88BD00E6B595 /* Step5Tests.m */,
+				4BF2291D184D8E4100E6B595 /* Test7.m */,
 				4B11EEA518482DE500F210EA /* Supporting Files */,
 				4B65D8F2184887F400452C81 /* PilotTests.m */,
 			);
@@ -376,6 +379,7 @@
 				4BF2291C184D88BD00E6B595 /* Step5Tests.m in Sources */,
 				4B11EEAB18482DE500F210EA /* AirplaneTests.m in Sources */,
 				4BF14931184892A200F40106 /* GliderTests.m in Sources */,
+				4BF2291E184D8E4100E6B595 /* Test7.m in Sources */,
 				4BF1492F18488FF000F40106 /* PoweredAirplaneTests.m in Sources */,
 				4B65D8F3184887F400452C81 /* PilotTests.m in Sources */,
 			);
